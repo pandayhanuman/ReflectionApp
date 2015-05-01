@@ -5,7 +5,7 @@ import java.lang.reflect.Method;
 public class RefTest {
 
 	public static void main(String[] args) {
-		System.out.println("----------------------------------------");
+		System.out.println("-------------------=======---------------------");
 		Class cl=Simple.class;
 		
 		try { 
