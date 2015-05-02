@@ -25,9 +25,9 @@ public class MainTest {
 		Employee e9 = new Employee("70", "prabhat");
 		Employee e10 = new Employee("120", "kumar");
 		Employee e11 = new Employee("30", "ritesh");
-		Employee e12 = new Employee("600", "ritesh");
+		Employee e12 = new Employee("100", "ritesh");
 		
-		Map<Employee,Employee> map=new HashMap<Employee, Employee>(600,100);
+		Map<Employee,Employee> map=new HashMap<Employee, Employee>(300,100);
 		map.put(e1, e1);
 		map.put(e2, e2);
 		map.put(e3, e3);
@@ -43,15 +43,21 @@ public class MainTest {
 
 //		Department d=new Department(map);
 //    Map<String,Employee> emp1=new TreeMap<String, Employee>(map);
-	Set<Employee> key=	map.keySet();
+/*	Set<Employee> key=	map.keySet();
 	
 	
 	for (Employee emp:key) {
 		System.out.println(emp);
-	}
+	}*/
      System.out.println("=================2==================");
+  /*   public Map<Integer,Channel> getSortChannelMap(Map<Map<Integer,Channel>>){
+    	 Map<Employee, Employee> se=new TreeMap<Employee, Employee>(new NameComp());
+    		se.putAll(map);
+    	 return se;
+     }*/
 	Map<Employee, Employee> se=new TreeMap<Employee, Employee>(new NameComp());
 	se.putAll(map);
+	
 	System.out.println(se.keySet());
 	
 	
@@ -74,12 +80,12 @@ public class MainTest {
 	map1.put(9, e9);
 	map1.put(10, e10);
 	map1.put(11, e11);
-/*	Map<Integer, Employee> se1=new TreeMap<Integer, Employee>() ;
+//	Map<Integer, Employee> se1=new TreeMap<Integer, Employee>() ;
 	
-	System.out.println(se1);*/
+//	System.out.println(se1);
 	Set<Entry<Integer,Employee>> eset=map1.entrySet();
 	List<Entry<Integer,Employee>> list=new ArrayList<Entry<Integer,Employee>>(eset);
-	Collections.sort(list,new ValueCompId());
+	Collections.sort(list,new ValueComp());
     for(Map.Entry<Integer,Employee> entry:list){
 
         System.out.println(entry.getKey()+" ==== "+entry.getValue());
@@ -139,7 +145,7 @@ class Employee {
 	
 	@Override
 	public int hashCode() {
-/*		final int prime = 31;
+	/*	final int prime = 31;
 		int result = 1;
 		result =  ((eid == null) ? 0 : eid.hashCode());
 		return result;*/
@@ -163,6 +169,7 @@ class Employee {
 			return false;
 		return true;
 	}
+	
 	@Override
 	public String toString() {
 		return " " + eid + "\t" + name + "\n ";
@@ -196,7 +203,7 @@ class Employee {
 		}
 		 
 	 }
- 
+
  class ValueComp implements Comparator<Map.Entry<Integer, Employee>>{
 
 	@Override
