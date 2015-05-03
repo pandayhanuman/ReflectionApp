@@ -1,5 +1,7 @@
 package com.man.enm;
 
+import javax.xml.ws.soap.Addressing;
+/*\* @Addressing  *\*/
 public enum EnumEx {
 	  
 	EnumEx(){};
