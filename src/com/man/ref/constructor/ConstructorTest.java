@@ -47,61 +47,7 @@ public class ConstructorTest {
 				System.out.println(obj.name+"\t"+obj.age+"\t"+obj.sal);
 				
 			}
-			/*for(Constructor<?> con:cons){
-				System.out.println(con);
-				Object[] params=con.getParameterTypes();
-				
-				for(int i=0;i<params.length;i++){
-				//	System.out.println(param);
-					Object param=params[i];
-					Class paramClass=(Class) param;
-					String type=paramClass.getName();
-					System.out.print("Enter value of "+type+" =");
-					String value=scan.next();
-					if(type.equals("int")){
-						param=new Integer(value);
-					}else if (type.equals("boolean")) {
-						param=new Boolean(value);
-					}else if (type.equals("char")) {
-						param=new Character(value.charAt(0));
-					}else if(type.equals("byte")){
-						param = new Byte(value);
-					}else if(type.equals("short")){
-						param = new Short(value);
-					}else if(type.equals("float")){
-						param = new Float(value);
-					}else if(type.equals("long")){
-						param = new Long(value);
-					}else if(type.equals("double")){
-						param = new Double(value);
-					}
-					
-				}
-				Object obj=con.newInstance(params);
-				for (;;) {
-					
-					
-				}
-		//		Object obj=con.newInstance(params);
-			}
-		} catch (ClassNotFoundException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (IllegalArgumentException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (InstantiationException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (IllegalAccessException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (InvocationTargetException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} 
-
-	*/
+	
 		}	
 		 catch (ClassNotFoundException e) {
 		// TODO Auto-generated catch block
